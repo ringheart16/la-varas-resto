@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: la-varas-resto
+    runtime: docker
+    plan: free
+    healthCheckPath: /health.php
+    envVars:
+      - key: PORT
+        value: 8080

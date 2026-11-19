@@ -1,0 +1,19 @@
+{
+  "name": "La Vara's Resto",
+  "short_name": "La Vara's",
+  "description": "Point of Sale & Online Ordering System for La Vara's Resto",
+  "start_url": "index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

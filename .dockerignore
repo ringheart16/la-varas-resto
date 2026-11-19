@@ -1,0 +1,5 @@
+.git
+.gitignore
+.railwayignore
+.dockerignore
+*.log
