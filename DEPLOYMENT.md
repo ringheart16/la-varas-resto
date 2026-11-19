@@ -1,6 +1,36 @@
 # La Vara's Resto - Deployment & Mobile Guide
 
-This document explains how to deploy **La Vara's Resto** (POS & Online Ordering System) to Railway and how to run it as a mobile app.
+This document explains how to deploy **La Vara's Resto** (POS & Online Ordering System) for free to **Render.com** (or Railway) and run it on mobile devices.
+
+---
+
+## 1. Deploying to Render.com (100% Free)
+
+The project includes an **all-in-one Dockerfile** with embedded MariaDB and Apache PHP. This means on Render's Free tier, the web app and database run together inside a single free container with **zero external database setup required**!
+
+### Step 1: Push code to your GitHub account (`ringheart16`)
+1. Create a new empty repository on GitHub: **[github.com/new](https://github.com/new)** (e.g. name it `la-varas-resto`).
+2. Run these commands in PowerShell / Terminal:
+   ```powershell
+   cd C:\Users\ringt\Downloads\la_varas_system\la_varas_system
+   git remote add origin https://github.com/ringheart16/la-varas-resto.git
+   git push -u origin main
+   ```
+
+### Step 2: Deploy on Render
+1. Go to your Render Dashboard: **[dashboard.render.com](https://dashboard.render.com)** (sign in with your GitHub account).
+2. Click **New +** (top right) -> Select **Web Service**.
+3. Choose **Build and deploy from a Git repository** -> Click **Next**.
+4. Select your **`la-varas-resto`** repository.
+5. Render will detect the Docker configuration automatically:
+   - **Name**: `la-varas-resto` (or whatever you prefer)
+   - **Region**: Singapore (or nearest)
+   - **Runtime**: `Docker`
+   - **Instance Type**: **Free** ($0/month)
+6. Click **Deploy Web Service**!
+
+Render will build the container, start the MariaDB database and Apache server, run the database migrations and seed data, and give you a permanent free live URL:
+👉 `https://la-varas-resto.onrender.com`
 
 ---
 
